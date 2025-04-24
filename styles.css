@@ -1,70 +1,70 @@
 /* Estilo general del cuerpo del documento */
 body {
-    font-family: Arial, sans-serif; /* Fuente general */
-    margin: 0; /* Sin margen exterior */
-    padding: 0; /* Sin relleno */
-    background-color: #e0f7fa; /* Color de fondo celeste claro */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
 }
 
 /* Estilo del encabezado */
 header {
-    background-color: #004d40; /* Verde oscuro */
-    color: white; /* Texto blanco */
+    background-color: #004d40;
+    color: white;
     padding: 20px;
-    text-align: center; /* Centrado */
+    text-align: center;
 }
 
 /* Estilo del menú desplegable de filtro */
 #characterFilter {
-    background-color: #227049; /* Azul vivo */
-    color: white; /* Texto blanco */
+    background-color: #227049;
+    color: white;
     border: none;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Animación suave */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Efecto hover para el filtro */
 #characterFilter:hover {
-    background-color: #216941; /* Azul más oscuro */
-    transform: scale(1.05); /* Efecto de ampliación */
+    background-color: #216941;
+    transform: scale(1.05);
 }
 
 /* Contenedor de las cards con diseño en grid */
 .card-container {
-    display: grid; /* Grid layout */
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-    gap: 20px; /* Espacio entre cards */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px;
 }
 
 /* Estilo individual de cada card */
 .card {
-    background: linear-gradient(135deg, #ffffff, #f1f8e9); /* Degradado claro */
-    border: 2px solid #388e3c; /* Borde verde oscuro */
+    background: linear-gradient(135deg, #ffffff, #f1f8e9);
+    border: 2px solid #388e3c;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
 /* Efecto hover en cards */
 .card:hover {
-    transform: scale(1.05); /* Aumento al pasar el cursor */
+    transform: scale(1.05);
 }
 
 /* Estilo para las imágenes dentro de las cards */
 .card img {
-    max-width: 100%; /* No exceder el ancho */
-    border-radius: 8px; /* Bordes redondeados */
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Estilo general del pie de página */
 footer {
-    background-color: #004d40; /* Mismo verde que el header */
+    background-color: #004d40;
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -81,12 +81,12 @@ footer {
 
 /* Lista de enlaces sociales */
 .social-links {
-    list-style: none; /* Quitar viñetas */
+    list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    flex-wrap: wrap; /* Salto de línea en pantallas pequeñas */
-    gap: 20px; /* Espacio entre ítems */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Ítems de lista */
@@ -97,22 +97,53 @@ footer {
 /* Estilo de los enlaces sociales */
 .social-links a {
     color: white;
-    text-decoration: none; /* Quitar subrayado */
+    text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre ícono y texto */
+    gap: 8px;
 }
 
 /* Hover para enlaces sociales */
 .social-links a:hover {
-    color: #81c784; /* Verde claro al pasar el cursor */
+    color: #81c784;
 }
 
-/* Diseño responsive para pantallas pequeñas */
+/* RESPONSIVE DESIGN */
+
+/* Para tablets (2 columnas) */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para celulares (1 columna y ajustes generales) */
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-columns: 1fr;
+    }
+
+    header, footer {
+        padding: 15px 10px;
+    }
+
+    #characterFilter {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .footer-content p {
+        font-size: 16px;
+    }
+
+    .social-links a {
+        font-size: 16px;
     }
 }
