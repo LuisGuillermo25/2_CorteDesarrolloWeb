@@ -1,70 +1,61 @@
-/* Estilo general del cuerpo del documento */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa;
+    background-color: #e0f7fa; /* Fondo general claro */
 }
 
-/* Estilo del encabezado */
 header {
-    background-color: #004d40;
+    background-color: #004d40; /* Verde oscuro */
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-/* Estilo del menú desplegable de filtro */
 #characterFilter {
-    background-color: #227049;
+    background-color: #15805c; /* Verde oscuro */
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
 }
 
-/* Efecto hover para el filtro */
 #characterFilter:hover {
-    background-color: #216941;
-    transform: scale(1.05);
+    background-color: #15805c; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
 }
 
-/* Contenedor de las cards con diseño en grid */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
     gap: 20px;
     padding: 20px;
 }
 
-/* Estilo individual de cada card */
 .card {
-    background: linear-gradient(135deg, #ffffff, #f1f8e9);
-    border: 2px solid #388e3c;
+    background: linear-gradient(135deg, #ffffff, #f1f8e9); /* Degradado claro */
+    border: 2px solid #388e3c; /* Borde verde más oscuro */
     border-radius: 10px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transition: transform 0.2s; /* Efecto de transición */
 }
 
-/* Efecto hover en cards */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
 }
 
-/* Estilo para las imágenes dentro de las cards */
 .card img {
-    max-width: 100%;
-    border-radius: 8px;
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
 }
 
-/* Estilo general del pie de página */
 footer {
-    background-color: #004d40;
+    background-color: #004d40; /* Verde oscuro */
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -73,13 +64,11 @@ footer {
     width: 100%;
 }
 
-/* Texto del footer */
 .footer-content p {
     margin-bottom: 15px;
     font-size: 18px;
 }
 
-/* Lista de enlaces sociales */
 .social-links {
     list-style: none;
     padding: 0;
@@ -89,12 +78,10 @@ footer {
     gap: 20px;
 }
 
-/* Ítems de lista */
 .social-links li {
     display: inline;
 }
 
-/* Estilo de los enlaces sociales */
 .social-links a {
     color: white;
     text-decoration: none;
@@ -105,9 +92,8 @@ footer {
     gap: 8px;
 }
 
-/* Hover para enlaces sociales */
 .social-links a:hover {
-    color: #81c784;
+    color: #81c784; /* Color más claro al pasar el mouse */
 }
 
 /* RESPONSIVE DESIGN */
@@ -115,14 +101,14 @@ footer {
 /* Para tablets (2 columnas) */
 @media (max-width: 1024px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
     }
 }
 
 /* Para celulares (1 columna y ajustes generales) */
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
     header, footer {

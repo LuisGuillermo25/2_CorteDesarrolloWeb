@@ -11,13 +11,20 @@ async function fetchCharacters() {
 function createCard(character) {
     const card = document.createElement('div');
     card.className = 'card';
+    
     // Usamos el estado como descripción
     const description = character.status; // Breve descripción del personaje
-    
+    const species = character.species; // Especie del personaje
+    const gender = character.gender; // Género del personaje
+    const location = character.location.name; // Ubicación del personaje
+
     card.innerHTML = `
         <img src="${character.image}" alt="${character.name}" />
         <h2>${character.name}</h2>
-        <p>${description}</p>
+        <p><strong>Estado:</strong> ${description}</p>
+        <p><strong>Especie:</strong> ${species}</p>
+        <p><strong>Género:</strong> ${gender}</p>
+        <p><strong>Ubicación:</strong> ${location}</p>
     `;
     return card;
 }
