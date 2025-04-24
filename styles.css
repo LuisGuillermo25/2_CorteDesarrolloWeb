@@ -23,7 +23,9 @@ header {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
     transition: background-color 0.3s, transform 0.2s;
+    max-width: 90%;
 }
 
 /* Efecto hover para el filtro */
@@ -59,6 +61,7 @@ header {
 /* Estilo para las imágenes dentro de las cards */
 .card img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -68,8 +71,6 @@ footer {
     color: white;
     text-align: center;
     padding: 30px 20px;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -110,29 +111,27 @@ footer {
     color: #81c784;
 }
 
-/* RESPONSIVE DESIGN */
-
-/* Para tablets (2 columnas) */
+/* Responsive para tablets */
 @media (max-width: 1024px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Para celulares (1 columna y ajustes generales) */
+/* Responsive para celulares grandes */
 @media (max-width: 768px) {
     .card-container {
         grid-template-columns: 1fr;
     }
 
-    header, footer {
+    header,
+    footer {
         padding: 15px 10px;
     }
 
     #characterFilter {
-        width: 100%;
-        margin-top: 10px;
         font-size: 16px;
+        padding: 10px;
     }
 
     .card {
@@ -145,5 +144,31 @@ footer {
 
     .social-links a {
         font-size: 16px;
+    }
+}
+
+/* Responsive para celulares pequeños */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    #characterFilter {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .footer-content p,
+    .social-links a {
+        font-size: 14px;
+    }
+
+    .card-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 8px;
     }
 }
